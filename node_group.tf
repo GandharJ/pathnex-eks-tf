@@ -2,12 +2,11 @@ resource "aws_eks_node_group" "pathnex-NG" {
   cluster_name    = aws_eks_cluster.pathnex.name
   node_group_name = "pathnex-ng"
 
-  node_role_arn = "arn:aws:iam::174132708859:role/AmazonEKSNodeRole"
+  node_role_arn = "arn:aws:iam::756856629061:role/AmazonEKSNodeRole"
 
   subnet_ids = [
-    "subnet-095c754c9a7d7b2b4",
-    "subnet-023ef84fb12426b62",
-    "subnet-04bef87cc676fb109"
+    "subnet-0ca21796ee3af2425",
+    "subnet-02ab37fec8bce0bd5"
   ]
 
   version        = "1.35"
@@ -24,7 +23,7 @@ resource "aws_eks_node_group" "pathnex-NG" {
 
   tags = {
   "k8s.io/cluster-autoscaler/enabled"          = "true"
-  "k8s.io/cluster-autoscaler/Pathnex-Sep-2026" = "owned"
+  "k8s.io/cluster-autoscaler/Pathnex-Oct-2026" = "owned"
   }
   
   lifecycle {
@@ -41,10 +40,10 @@ resource "aws_eks_node_group" "pathnex-NG" {
   }
 
   remote_access {
-    ec2_ssh_key = "Pathnex.pem"
+    ec2_ssh_key = "GPathnex.pem"
 
     source_security_group_ids = [
-      "sg-0680ef70a519ab38c"
+      "sg-0a59aa4d020f7b057"
     ]
   }
 }

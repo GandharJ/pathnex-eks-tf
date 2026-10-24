@@ -106,7 +106,7 @@ resource "aws_iam_policy" "cluster_autoscaler" {
           StringEquals = {
             "aws:ResourceTag/k8s.io/cluster-autoscaler/enabled" = "true"
 
-            "aws:ResourceTag/k8s.io/cluster-autoscaler/Pathnex-Sep-2026" = "owned"
+            "aws:ResourceTag/k8s.io/cluster-autoscaler/Pathnex-Oct-2026" = "owned"
           }
         }
       }
